@@ -10,7 +10,8 @@ $(document).ready(function() {
 
 store.items.push(Item.create('apples'));
 
-api.getItems()
-  .then(res => console.log(res));
+// api.getItems()
+//   .then(response => response.json())
+//   .then(data => console.log(data));
 
 console.log(api.BASE_URL);
