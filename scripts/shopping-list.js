@@ -69,10 +69,9 @@ const shoppingList = (function(){
       const newItemName = $('.js-shopping-list-entry').val();
       $('.js-shopping-list-entry').val('');
       api.createItem(newItemName)
-        .then(res => res.json())
-        .then((newItem) => {
-          store.addItem(newItem);
-          render();
+        .then(newItem => { 
+          store.addItem(newItem); 
+          render(); 
         });
     });
   }
@@ -100,7 +99,6 @@ const shoppingList = (function(){
       // delete the item
       api.deleteItem(id);
       store.findAndDelete(id);
-      
       render();
     });
   }

@@ -6,7 +6,6 @@ $(document).ready(function() {
   shoppingList.bindEventListeners();
 
   api.getItems()
-    .then(res => res.json())
     .then((items) => {
       items.forEach((item) => store.addItem(item));
       shoppingList.render();
@@ -34,4 +33,4 @@ $(document).ready(function() {
 //   });
 
 
-console.log(api.BASE_URL);
+// console.log(api.BASE_URL);
