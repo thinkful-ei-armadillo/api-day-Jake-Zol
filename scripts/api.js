@@ -30,12 +30,20 @@ const api = (function () {
     });
   };
 
+  const deleteItem = function(id){
+    const url = `${BASE_URL}/items/${id}`;
+    return fetch(url, {
+      method: 'DELETE'
+    });
+  };
+
 
 
   return {
     getItems,
     createItem,
     updateItem,
+    deleteItem
 
   };
 }());
